@@ -1,0 +1,116 @@
+/* =========================================
+   ARTICLE + RELATED ARTICLES LAYOUT
+========================================= */
+
+.article-layout {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 24px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 45px;
+
+    align-items: start;
+}
+
+
+/* Main Article */
+
+.article-layout .post {
+    min-width: 0;
+}
+
+
+/* Related Articles Sidebar */
+
+.related-sidebar {
+    position: sticky;
+    top: 30px;
+}
+
+.related-box {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 22px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.related-box h2 {
+    margin: 0 0 20px;
+    font-size: 22px;
+}
+
+
+/* Individual Related Article */
+
+.related-card {
+    display: block;
+
+    padding: 16px 0;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    transition: transform 0.2s ease;
+}
+
+.related-card:last-child {
+    border-bottom: none;
+}
+
+.related-card:hover {
+    transform: translateX(4px);
+}
+
+.related-card span {
+    display: block;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    margin-bottom: 6px;
+
+    letter-spacing: 0.5px;
+}
+
+.related-card strong {
+    display: block;
+
+    font-size: 16px;
+    line-height: 1.45;
+
+    margin-bottom: 8px;
+}
+
+.related-card small {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .article-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .related-sidebar {
+        position: static;
+    }
+
+    .related-box {
+        margin-top: 10px;
+    }
+
+}
